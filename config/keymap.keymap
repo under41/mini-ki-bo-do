@@ -1,0 +1,272 @@
+#include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+
+
+    behaviors {
+          macro_under41: macro_under41 {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings =
+              <&kp U>,
+              <&kp N>,
+              <&kp D>,
+              <&kp E>,
+        	  <&kp R>,
+              <&kp N4>,
+              <&kp N1>;
+           };
+        macro_uub041431: macro_uub041431 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+            <&kp U>,
+            <&kp U>,
+            <&kp B>,
+            <&kp N0>,
+            <&kp N4>,
+            <&kp N1>,
+            <&kp N4>,
+            <&kp N3>,
+            <&kp N1>;
+          };
+
+         
+        bt_sel0_only: bt_sel0_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 0>,
+                <&bt BT_DISC 1>,
+                <&bt BT_DISC 2>,
+                <&bt BT_DISC 3>;
+        };
+       bt_sel1_only: bt_sel1_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 1>,
+                <&bt BT_DISC 0>,
+                <&bt BT_DISC 2>,
+                <&bt BT_DISC 3>;
+        };
+       bt_sel2_only: bt_sel2_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 2>,
+                <&bt BT_DISC 0>,
+                <&bt BT_DISC 1>,
+                <&bt BT_DISC 3>;
+        };
+        bt_sel3_only: bt_sel3_only {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&bt BT_SEL 3>,
+                <&bt BT_DISC 1>,
+                <&bt BT_DISC 2>,
+                <&bt BT_DISC 0>;
+        };
+
+
+
+   
+         mt_cmd_z: mt_cmd_z {                 //Z to komanndo no taiminngutyousei
+             compatible = "zmk,behavior-hold-tap";
+             #binding-cells = <2>;
+             flavor = "tap-preferred";
+             tapping-term-ms = <320>;
+             bindings = <&kp>, <&kp>;
+          };
+
+         mt_ctrl_z: mt_ctrl_z {              //Z to konntoro-ru no taiminngutyousei
+             compatible = "zmk,behavior-hold-tap";
+             #binding-cells = <2>;
+             flavor = "tap-preferred";
+             tapping-term-ms = <320>;
+             bindings = <&kp>, <&kp>;
+          };
+
+
+    
+          mt_lsft_a: mt_lsft_a {              //A to sihuto no taiminngutyousei
+               compatible = "zmk,behavior-hold-tap";
+               #binding-cells = <2>;
+               flavor = "tap-preferred";
+               tapping-term-ms = <320>;
+               bindings = <&kp>, <&kp>;
+           };
+
+         mt_rsft_up: mt_rsft_up {            //ueyajirusi to sihuto no taiminngutyousei
+              compatible = "zmk,behavior-hold-tap";
+              #binding-cells = <2>;
+              flavor = "tap-preferred";
+              tapping-term-ms = <320>;
+              bindings = <&kp>, <&kp>;
+         };
+
+
+
+        td_ctrl_cmdz: td_ctrl_cmdz {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = < &kp LCTRL &kp LG(Z) >;
+        };
+        td_ctrl_ctrlz: td_ctrl_ctrlz { 
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = < &kp LCTRL &kp LC(Z) >;
+        };
+        td_shift_cmda: td_shift_cmda {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = < &kp LSHIFT &kp LG(A) >;
+       };
+       td_scln_cmds: td_scln_cmds {
+           compatible = "zmk,behavior-tap-dance";
+           #binding-cells = <0>;
+           tapping-term-ms = <200>;
+           bindings = < &kp LS(SCLN) &kp LG(S) >;
+       };
+       td_shift_ctrla: td_shift_ctrla {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = < &kp LSHIFT &kp LC(A) >;
+       };
+       td_sqt_ctrls: td_sqt_ctrls {
+          compatible = "zmk,behavior-tap-dance";
+          #binding-cells = <0>;
+          tapping-term-ms = <200>;
+          bindings = < &kp SQT &kp LC(S) >;
+       };
+
+    };
+
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        layer_0 {      //mac home
+            bindings =<
+                &kp TAB        &kp Q              &kp W      &kp E        &kp R     &kp T                                    &kp Y     &kp U       &kp I          &kp O    &kp P               &lt 6 BSPC
+				&kp ESC        &mt_lsft_a LSFT A  &lt 4 S    &kp D        &kp F     &kp G                                    &kp H     &kp J       &kp K          &kp L    &mt_rsft_up RSFT UP &lt 9 DEL
+				&td_shift_cmda &mt_cmd_z LGUI Z   &lt 6 X    &kp C        &kp V     &kp B     &td_scln_cmds  &lt 7 LS(GRAVE) &kp N     &kp M       &kp LS(MINUS)  &kp LEFT &kp DOWN            &kp RIGHT
+				&td_ctrl_cmdz  &kp LGUI           &kp LALT   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                             &kp MINUS &lt 3 ENTER                         &kp LS(N2)          &kp COMMA
+            >;
+        };
+
+        layer_1 {     //win home
+            bindings =<
+                &kp TAB         &kp Q              &kp W      &kp E        &kp R     &kp T                                     &kp Y     &kp U       &kp I          &kp O    &kp P               &lt 6 BSPC
+			 	&kp ESC         &mt_lsft_a LSFT A  &lt 5 S    &kp D        &kp F     &kp G                                     &kp H     &kp J       &kp K          &kp L    &mt_rsft_up RSFT UP &lt 10 DEL
+				&td_shift_ctrla &mt_ctrl_z LCTRL Z &lt 6 X    &kp C        &kp V     &kp B     &td_sqt_ctrls   &lt 7 LS(EQUAL) &kp N     &kp M       &kp LS(0x87)   &kp LEFT &kp DOWN            &kp RIGHT
+				&td_ctrl_ctrlz  &kp LGUI           &kp LALT   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                              &kp MINUS &lt 8 ENTER                         &kp LBKT            &kp COMMA
+            >;
+        };
+
+        layer_2 {    //num common
+            bindings =<
+                &kp N7 &kp N8   &kp N9    &kp KP_N7  &kp KP_N8  &kp KP_N9                   &kp F1  &kp F2  &kp F3 &kp F4  &kp F5  &kp F6
+				&kp N4 &kp N5   &kp N6    &kp KP_N4  &kp KP_N5  &kp KP_N6                   &kp F7  &kp F8  &kp F9 &kp F10 &kp F11 &kp F12
+				&kp N1 &kp N2   &kp N3    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none    &none   &none   &none   &none  &none   &none   &none
+				&kp N0 &kp LGUI &kp LALT  &kp KP_N0  &none      &none                       &none   &none                  &none   &none
+            >;
+        };
+
+
+        layer_3{    //simbol mac
+            bindings =<
+                &none      &kp LS(SLASH) &none      &kp EQUAL  &none &kp LS(EQUAL)                       &kp LBKT      &kp RBKT    &none      &none &kp LS(N5) &none
+				&none      &kp LS(N7)    &kp LS(N3) &kp LS(N4) &none &none                               &kp LS(N9)    &kp LS(N0)  &kp LS(N8) &none &kp LS(N6) &none
+				&kp LSHIFT &none         &none      &kp SCLN   &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none &kp BSLH   &none
+				&kp LCTRL  &kp LGUI      &kp LALT   &none      &none &kp LC(SPACE)                       &kp LS(N2)    &kp LS(N3)                   &kp SQT    &none
+            >;
+        };
+
+        layer_4 {   //mouse mac
+            bindings =<
+                &none      &none      &none     &mkp MCLK     &kp LG(BSPC)  &none                              &none            &none             &kp UP    &none       &none      &kp LG(LS(N4))
+				&none      &kp LSHIFT &none     &mkp LCLK     &mkp RCLK     &none                              &none            &kp LEFT          &kp DOWN &kp RIGHT    &kp LC(UP) &none
+				&kp LSHIFT &kp LGUI   &none     &kp LG(C)     &kp LG(V)     &kp LG(X)    &none           &none &none            &none             &none    &kp LC(LEFT) &none      &kp LC(RIGHT)
+				&kp LCTRL  &kp LGUI   &kp LALT  &kp LG(MINUS) &kp LG(SCLN)  &kp LG(LS(N))                      &kp LG(LA(LEFT)) &kp LG(LA(RIGHT))                       &none      &kp LG(W)
+            >;
+        };
+
+        layer_5 {   //mouse win
+            bindings =<
+                &none       &none      &none    &mkp MCLK     &kp DEL       &none                           &none            &none             &kp UP    &none            &none       &kp LG(LS(S))
+				&none       &kp LSHIFT &none    &mkp LCLK     &mkp RCLK     &none                           &none            &kp LEFT          &kp DOWN  &kp RIGHT        &kp LG(TAB) &none
+				&kp LSHIFT  &kp LCTRL  &none    &kp LC(C)     &kp LC(V)     &kp LC(X)      &none      &none &none            &none             &none     &kp LG(LC(LEFT)) &none       &kp LC(LG(RIGHT))
+				&kp LCTRL   &kp LGUI   &kp LALT &kp LC(MINUS) &kp LC(EQUAL) &kp LC(LS(N))                   &kp LG(LEFT)     &kp LG(RIGHT)                                &none       &kp LA(F4)
+            >;
+        };
+        layer_6 {   //scrol
+            bindings =<
+                &none       &none    &none    &none &none &none                      &none         &none            &none &none &none &none
+				&none       &none    &none    &none &none &none                      &none         &none            &none &none &none &none
+				&kp LSHIFT  &none    &none    &none &none &none &none          &none &none         &none            &none &none &none &none
+				&kp LCTRL   &kp LGUI &kp LALT &none &none &none                      &none         &none                        &none &none
+            >;
+        };
+        layer_7 {   //bluetooth etc
+            bindings =<
+                &bt_sel0_only   &bt_sel1_only      &bt_sel2_only &bt_sel3_only &none &none                        &none &none &none &none &none &none
+				&to 0          &to 1             &none        &none        &none &none                        &none &none &none &none &none &none
+				&none          &none             &none        &none        &none &none &bt BT_CLR       &none &none &none &none &none &none &none
+				&macro_under41 &macro_uub041431  &none        &none        &none &none                        &none &none             &none &none
+            >;
+        };
+        layer_8 {   ////simbol win
+            bindings =<
+                &none       &kp LS(SLASH) &none      &kp LS(MINUS) &none &kp LS(SCLN)                        &kp RBKT      &kp BSLH    &none      &none &kp LS(N5) &none
+				&none       &kp LS(N6)    &kp LS(N3) &kp LS(N4)    &none &none                               &kp LS(N8)    &kp LS(N9)  &kp LS(N8) &none &kp EQUAL  &none
+				&kp LSHIFT  &none         &none      &kp SCLN      &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none &kp LS(N7) &none
+				&kp LCTRL   &kp LGUI      &kp LALT   &none         &none &kp GRAVE                           &kp LS(N2)    &kp LS(N3)                   &kp LS(N2) &none
+            >;
+        };
+       layer_9 {   ////syanthi  mac
+            bindings =<
+                &none &none &none &none &none &none                    &none &none &none        &none     &none     &none 
+				&none &none &none &none &none &none                    &none &none &kp LG(BSPC) &mkp LCLK &mkp RCLK &none 
+			    &none &none &none &none &none &none  &none       &none &none &none &kp LG(C)    &kp LG(V) &kp LG(D) &none
+			    &none &none &none &none &none &none                    &none &none                        &none     &none 
+            >;
+        };
+       layer_10 {   ////syanthi win
+            bindings =<
+                &none &none &none &none &none &none                    &none &none &none      &none      &none     &none 
+				&none &none &none &none &none &none                    &none &none &kp DEL    &mkp LCLK  &mkp RCLK &none 
+			    &none &none &none &none &none &none  &none       &none &none &none &kp LC(C)  &kp LC(V)  &kp LC(X) &none
+			    &none &none &none &none &none &none                    &none &none                       &none     &none 
+        
+            >;
+        };
+        layer_11 {   ////num  hankaku
+            bindings =<
+                &none &none &none &none &none &none                    &kp KP_N7 &kp KP_N8 &kp KP_N9 &none &none &none 
+				&none &none &none &none &none &none                    &kp KP_N4 &kp KP_N5 &kp KP_N6 &none &none &none 
+			    &none &none &none &none &none &none  &none       &none &kp KP_N1 &kp KP_N2 &kp KP_N3 &none &none &none
+			    &kp LCTRL  &kp LGUI   &kp LALT &none &none &none                    &none &kp KP_N0                     &none &none 
+        
+            >;
+        };
+        layer_12 {   ////num  zennkaku
+            bindings =<
+                &none &none &none &none &none &none                    &kp N7 &kp N8 &kp N9 &none &none &none 
+				&none &none &none &none &none &none                    &kp N4 &kp N5 &kp N6 &none &none &none 
+			    &none &none &none &none &none &none  &none       &none &kp N1 &kp N2 &kp N3 &none &none &none
+			    &kp LCTRL  &kp LGUI   &kp LALT &none &none &none                    &none &kp N0               &none &none 
+        
+            >;
+        };
+
+    };
+};
