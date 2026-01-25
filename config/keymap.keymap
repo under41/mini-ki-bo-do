@@ -152,23 +152,6 @@
           tapping-term-ms = <200>;
           bindings = < &kp SQT &kp LC(S) >;
        };
-       td_grv_cmda: td_grv_cmda {
-          compatible = "zmk,behavior-tap-dance";
-          #binding-cells = <0>;
-          tapping-term-ms = <200>;
-          bindings = < &kp LS(GRAVE) &kp LG(A) >;
-       };
-
-       ht_mo7_td_grv_cmda: ht_mo7_td_grv_cmda {            //hold: layer7 / tap: LS(GRAVE) / dt: Cmd+A
-          compatible = "zmk,behavior-hold-tap";
-          #binding-cells = <1>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <320>;
-          bindings = < &td_grv_cmda &mo >;
-       };
-
-
-
 
     };
 
@@ -180,7 +163,7 @@
             bindings =<
                 &none          &td_q_esc          &kp W      &kp E        &kp R     &kp T                                    &kp Y     &kp U       &kp I          &lt 6 O  &kp P                   &none
 				&none          &mt_lsft_a LSFT A  &lt 4 S    &kp D        &kp F     &kp G                                    &kp H     &kp J       &kp K          &lt 9 L  &mt_rsft_bspc RSFT BSPC &none
-				&td_shift_cmda &mt_cmd_z LGUI Z   &lt 6 X    &kp C        &kp V     &kp B     &td_scln_cmds  &ht_mo7_td_grv_cmda 7 &kp N     &kp M       &kp LS(MINUS)  &kp TAB  &kp DEL                 &none
+				&td_shift_cmda &mt_cmd_z LGUI Z   &lt 6 X    &kp C        &kp V     &kp B     &td_scln_cmds  &lt 7 LS(GRAVE) &kp N     &kp M       &kp LS(MINUS)  &kp TAB  &kp DEL                 &none
 				&td_ctrl_cmdz  &kp LGUI           &kp LALT   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                             &kp MINUS &lt 3 ENTER                         &kp COMMA               &none
             >;
         };
