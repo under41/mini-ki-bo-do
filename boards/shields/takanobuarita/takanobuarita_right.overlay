@@ -53,7 +53,7 @@
 
     
     scroll_override {
-        layers = <6>;
+        layers = <6 13>;
         input-processors = <&zip_xy_to_scroll_mapper>,
                            <&zip_scroll_scaler 1 80>;
     };
