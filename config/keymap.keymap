@@ -158,7 +158,7 @@
             bindings =<
                 &kp TAB        &kp Q              &kp W      &kp E        &kp R     &kp T                                    &kp Y     &kp U       &kp I          &lt 6 O  &kp P                   &none
 				&kp ESC        &mt_lsft_a LSFT A  &lt 4 S    &kp D        &kp F     &kp G                                    &kp H     &kp J       &kp K          &lt 9 L  &mt_rsft_bspc RSFT BSPC &none
-				&td_shift_cmda &mt_cmd_z LGUI Z   &lt 6 X    &kp C        &kp V     &kp B     &td_scln_cmds  &lt 7 LS(GRAVE) &kp N     &kp M       &kp LS(MINUS)  &none    &kp DEL                 &none
+				&td_shift_cmda &mt_cmd_z LGUI Z   &lt 6 X    &kp C        &kp V     &kp B     &td_scln_cmds  &lt 7 LS(GRAVE) &kp N     &kp M       &kp LS(MINUS)  &kp TAB  &kp DEL                 &none
 				&td_ctrl_cmdz  &kp LGUI           &kp LALT   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                             &kp MINUS &lt 3 ENTER                         &kp COMMA               &none
             >;
         };
@@ -167,7 +167,7 @@
             bindings =<
                 &kp TAB         &kp Q              &kp W      &kp E        &kp R     &kp T                                     &kp Y     &kp U       &kp I          &lt 6 O    &kp P                   &none
 			 	&kp ESC         &mt_lsft_a LSFT A  &lt 5 S    &kp D        &kp F     &kp G                                     &kp H     &kp J       &kp K          &lt 10 L   &mt_rsft_bspc RSFT BSPC &none
-				&td_shift_ctrla &mt_ctrl_z LCTRL Z &lt 6 X    &kp C        &kp V     &kp B     &td_sqt_ctrls   &lt 7 LS(EQUAL) &kp N     &kp M       &kp LS(0x87)   &none      &kp DEL                 &none
+				&td_shift_ctrla &mt_ctrl_z LCTRL Z &lt 6 X    &kp C        &kp V     &kp B     &td_sqt_ctrls   &lt 7 LS(EQUAL) &kp N     &kp M       &kp LS(0x87)   &kp TAB    &kp DEL                 &none
 				&td_ctrl_ctrlz  &kp LGUI           &kp LALT   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                              &kp MINUS &lt 8 ENTER                           &kp COMMA               &none
             >;
         };
@@ -184,10 +184,10 @@
 
         layer_3{    //simbol mac
             bindings =<
-                &none      &kp LS(SLASH) &none      &kp EQUAL  &none &kp LS(EQUAL)                       &kp LBKT      &kp RBKT    &none      &none &kp LS(N5) &none
-				&none      &kp LS(N7)    &kp LS(N3) &kp LS(N4) &none &none                               &kp LS(N9)    &kp LS(N0)  &kp LS(N8) &none &kp LS(N6) &none
-				&kp LSHIFT &none         &none      &kp SCLN   &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none &kp BSLH   &none
-				&kp LCTRL  &kp LGUI      &kp LALT   &none      &none &kp LC(SPACE)                       &kp LS(N2)    &kp LS(N3)                   &kp SQT    &none
+                &none      &kp LS(SLASH) &none      &kp EQUAL  &none &kp LS(EQUAL)                       &kp LBKT      &kp RBKT    &none      &none      &kp LS(N5) &none
+				&none      &kp LS(N7)    &kp LS(N3) &kp LS(N4) &none &none                               &kp LS(N9)    &kp LS(N0)  &kp LS(N8) &kp LS(N2) &kp LS(N6) &none
+				&kp LSHIFT &none         &none      &kp SCLN   &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none      &kp BSLH   &none
+				&kp LCTRL  &kp LGUI      &kp LALT   &none      &none &kp LC(SPACE)                       &kp LS(N2)    &kp LS(N3)                        &kp SQT    &none
             >;
         };
 
@@ -226,10 +226,10 @@
         };
         layer_8 {   ////simbol win
             bindings =<
-                &none       &kp LS(SLASH) &none      &kp LS(MINUS) &none &kp LS(SCLN)                        &kp RBKT      &kp BSLH    &none      &none &kp LS(N5) &none
-				&none       &kp LS(N6)    &kp LS(N3) &kp LS(N4)    &none &none                               &kp LS(N8)    &kp LS(N9)  &kp LS(N8) &none &kp EQUAL  &none
-				&kp LSHIFT  &none         &none      &kp SCLN      &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none &kp LS(N7) &none
-				&kp LCTRL   &kp LGUI      &kp LALT   &none         &none &kp GRAVE                           &kp LS(N2)    &kp LS(N3)                   &kp LS(N2) &none
+                &none       &kp LS(SLASH) &none      &kp LS(MINUS) &none &kp LS(SCLN)                        &kp RBKT      &kp BSLH    &none      &none    &kp LS(N5) &none
+				&none       &kp LS(N6)    &kp LS(N3) &kp LS(N4)    &none &none                               &kp LS(N8)    &kp LS(N9)  &kp LS(N8) &kp LBKT &kp EQUAL  &none
+				&kp LSHIFT  &none         &none      &kp SCLN      &none &kp LS(N1)     &none          &none &kp LS(COMMA) &kp LS(DOT) &none      &none    &kp LS(N7) &none
+				&kp LCTRL   &kp LGUI      &kp LALT   &none         &none &kp GRAVE                           &kp LS(N2)    &kp LS(N3)                      &kp LS(N2) &none
             >;
         };
        layer_9 {   ////syanthi  mac
