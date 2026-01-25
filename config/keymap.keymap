@@ -161,28 +161,28 @@
 
         layer_0 {      //mac home
             bindings =<
-                &none          &td_q_esc          &kp W          &kp E        &kp R     &kp T                                    &kp Y     &kp U       &kp I          &lt 6 O  &kp P                   &none
-				&none          &mt_lsft_a LSFT A  &lt 4 S        &kp D        &kp F     &kp G                                    &kp H     &kp J       &kp K          &lt 9 L  &mt_rsft_bspc RSFT BSPC &none
+                &none &td_q_esc          &kp W          &kp E        &kp R     &kp T                                    &kp Y     &kp U       &kp I          &lt 6 O  &kp P                   &none
+				&none &mt_lsft_a LSFT A  &lt 4 S        &kp D        &kp F     &kp G                                    &kp H     &kp J       &kp K          &lt 9 L  &mt_rsft_bspc RSFT BSPC &none
 				&none &mt_cmd_z LGUI Z   &lt 6 X        &kp C        &kp V     &kp B     &td_scln_cmds  &lt 7 LS(GRAVE) &kp N     &kp M       &kp LS(MINUS)  &kp TAB  &kp DEL                 &none
-				&none  &td_gui_cmdz       &td_alt_cmda   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                             &kp MINUS &lt 3 ENTER                         &kp COMMA               &none
+				&none &td_gui_cmdz       &td_alt_cmda   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                             &kp MINUS &lt 3 ENTER                         &kp COMMA               &none
             >;
         };
 
         layer_1 {     //win home
             bindings =<
-                &none           &td_q_esc          &kp W           &kp E        &kp R     &kp T                                     &kp Y     &kp U       &kp I          &lt 6 O    &kp P                   &none
-			 	&none           &mt_lsft_a LSFT A  &lt 5 S         &kp D        &kp F     &kp G                                     &kp H     &kp J       &kp K          &lt 10 L   &mt_rsft_bspc RSFT BSPC &none
+                &none &td_q_esc          &kp W           &kp E        &kp R     &kp T                                     &kp Y     &kp U       &kp I          &lt 6 O    &kp P                   &none
+			 	&none &mt_lsft_a LSFT A  &lt 5 S         &kp D        &kp F     &kp G                                     &kp H     &kp J       &kp K          &lt 10 L   &mt_rsft_bspc RSFT BSPC &none
 				&none &mt_ctrl_z LCTRL Z &lt 13 X        &kp C        &kp V     &kp B     &td_sqt_ctrls   &lt 7 LS(EQUAL) &kp N     &kp M       &kp LS(0x87)   &kp TAB    &kp DEL                 &none
-				&none  &td_gui_ctrlz      &td_alt_ctrla   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                              &kp MINUS &lt 8 ENTER                           &kp COMMA               &none
+				&none &td_gui_ctrlz      &td_alt_ctrla   &lt 12 SLASH &lt 2 DOT &lt 11 SPACE                              &kp MINUS &lt 8 ENTER                           &kp COMMA               &none
             >;
         };
 
         layer_2 {    //num common
             bindings =<
-                &kp N7 &kp N8   &kp N9    &kp KP_N7  &kp KP_N8  &kp KP_N9                   &kp F1  &kp F2  &kp F3 &kp F4  &kp F5  &kp F6
-				&kp N4 &kp N5   &kp N6    &kp KP_N4  &kp KP_N5  &kp KP_N6                   &kp F7  &kp F8  &kp F9 &kp F10 &kp F11 &kp F12
-				&kp N1 &kp N2   &kp N3    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none    &none   &none   &none   &none  &none   &none   &none
-				&kp N0 &kp LGUI &kp LALT  &kp KP_N0  &none      &none                       &none   &none                  &none   &none
+                &none &none   &none    &none &none  &none                   &kp F1  &kp F2  &kp F3 &kp F4  &kp F5  &kp F6
+				&none &none   &none    &none &none  &none                   &kp F7  &kp F8  &kp F9 &kp F10 &kp F11 &kp F12
+				&none &none   &none    &none &none  &none  &none    &none   &none   &none   &none  &none   &none   &none
+				&none &none   &none    &none &none  &none                   &none   &none   &none                  &none
             >;
         };
 
